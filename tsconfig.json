@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "outDir": "./dist",
+        "target": "es5",
+        "sourceMap": true,
+        "allowJs": true,
+        "lib": [
+            "es2015.promise",
+            "es5",
+            "dom",
+            "es6",
+            "es7",
+            "scripthost"
+        ]
+    },
+    "include": [
+        "./src"
+    ],
+    "exclude": [
+        "./src/common/res"
+    ]
+}
