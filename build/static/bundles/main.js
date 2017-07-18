@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "1d7b7cfa7747c50404d7"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "35138b8aa523d18ca799"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -10358,8 +10358,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // libs
 var React = __webpack_require__(82);
 var ReactDOM = __webpack_require__(98);
+// css
+__webpack_require__(184);
 function App(props) {
-    return React.createElement("div", null, "App");
+    return React.createElement("div", { className: "app" }, "App");
 }
 ReactDOM.render(React.createElement(App, null), document.getElementById("main"), null);
 
@@ -22963,6 +22965,12 @@ var ReactDOMInvalidARIAHook = {
 };
 
 module.exports = ReactDOMInvalidARIAHook;
+
+/***/ }),
+/* 184 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

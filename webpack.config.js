@@ -8,12 +8,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // path
 let sourcePath = path.join(__dirname, 'src');
-let buildPath = path.join(__dirname, 'dist');
+let buildPath = path.join(__dirname, 'build/dist');
 
 let env = process.env.NODE_ENV === "development" ? "development" : "production";
 
 if (env === "development") {
-    buildPath = path.join(__dirname, "static");
+    buildPath = path.join(__dirname, "build/static");
 }
 
 module.exports = {
@@ -65,7 +65,7 @@ module.exports = {
             "process.env": JSON.stringify(env)
         }),
         new HtmlWebpackPlugin({
-            title: "AsyncDemo-Monkey",
+            title: "Banner",
             template: path.join(sourcePath, "index.html")
         }),
         new ExtractTextWebpackPlugin("css/index.css")
