@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-dev": "export NODE_ENV=development && webpack",
     "build-prd": "export NODE_ENV=production && webpack",
-    "server": "webpack-dev-server --progress --open"
+    "server": "export NODE_ENV=development && webpack-dev-server --progress --open"
   },
   "repository": {
     "type": "git",
@@ -25,11 +25,13 @@
   },
   "homepage": "https://github.com/TigerWFH/banner#readme",
   "dependencies": {
+    "classnames": "^2.2.5",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.0",
     "@types/react": "^15.0.38",
     "@types/react-dom": "^15.5.1",
     "awesome-typescript-loader": "^3.2.1",

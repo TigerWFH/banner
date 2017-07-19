@@ -1,10 +1,11 @@
 // node libs
 const path = require('path');
 
-let sourcePath = path.join(__dirname, 'src');
+let sourcePath = path.join(__dirname, 'src/modules/banner.tsx');
 let buildPath = path.join(__dirname, 'dist/');
 
 module.exports = {
+    entry: sourcePath,
     output: {
         path: buildPath,
         filename: '[name].js'
@@ -20,6 +21,9 @@ module.exports = {
                 test: /\.less$/,
                 include: [sourcePath],
                 use: [
+                    {
+                        loader: 'style-loader'
+                    },
                     {
                         loader: "css-loader"
                     },
