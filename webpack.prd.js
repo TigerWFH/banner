@@ -1,11 +1,11 @@
 // node libs
 const path = require('path');
 
-let sourcePath = path.join(__dirname, 'src/modules/banner.tsx');
+let sourcePath = path.join(__dirname, 'src/modules');
 let buildPath = path.join(__dirname, 'dist/');
 
 module.exports = {
-    entry: sourcePath,
+    entry: path.join(sourcePath, "banner.tsx"),
     output: {
         path: buildPath,
         filename: '[name].js'
@@ -25,10 +25,10 @@ module.exports = {
                         loader: 'style-loader'
                     },
                     {
-                        loader: "css-loader"
+                        loader: 'css-loader'
                     },
                     {
-                        loader: "less-loader"
+                        loader: 'less-loader'
                     }
                 ]
             },

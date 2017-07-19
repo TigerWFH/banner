@@ -8,6 +8,8 @@ let sourcePath = path.join(__dirname, 'src');
 let env = process.env.NODE_ENV === "development" ? "development" : "production";
 if (env === "production") {
     conditionConfig = require('./webpack.prd.js');
+    sourcePath = path.join(__dirname, 'src/modules');
+    buildPath = path.join(__dirname, 'dist');
 }
 
 let config = {
@@ -32,5 +34,4 @@ let config = {
         }
     }
 };
-
 module.exports = Object.assign({}, config, conditionConfig);
