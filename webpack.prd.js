@@ -2,7 +2,7 @@
 const path = require('path');
 
 let sourcePath = path.join(__dirname, 'src/modules');
-let buildPath = path.join(__dirname, 'dist/');
+let buildPath = path.join(__dirname, 'lib/');
 
 module.exports = {
     entry: path.join(sourcePath, "banner.tsx"),
@@ -10,7 +10,7 @@ module.exports = {
         path: buildPath,
         filename: 'index.js',
         library: "banner",
-        libraryTarget: "amd"
+        libraryTarget: "commonjs"
     },
     module: {
         rules: [
