@@ -8,7 +8,9 @@ module.exports = {
     entry: path.join(sourcePath, "banner.tsx"),
     output: {
         path: buildPath,
-        filename: 'index.js'
+        filename: 'index.js',
+        library: "banner",
+        libraryTarget: "amd"
     },
     module: {
         rules: [

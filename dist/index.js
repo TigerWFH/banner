@@ -1,4 +1,4 @@
-/******/ (function(modules) { // webpackBootstrap
+define("banner", ["React"], function(__WEBPACK_EXTERNAL_MODULE_1__) { return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -170,7 +170,7 @@ exports.default = Banner;
 /* 1 */
 /***/ (function(module, exports) {
 
-module.exports = React;
+module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 
 /***/ }),
 /* 2 */
@@ -809,4 +809,4 @@ module.exports = function (css) {
 
 
 /***/ })
-/******/ ]);
+/******/ ])});;
