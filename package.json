@@ -1,6 +1,6 @@
 {
   "name": "banner",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "基于typescript的轮播组件",
   "main": "index.js",
   "scripts": {
