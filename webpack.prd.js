@@ -19,7 +19,14 @@ module.exports = {
             {
                 test: /\.less$/,
                 include: [sourcePath],
-                use: []
+                use: [
+                    {
+                        loader: "css-loader"
+                    },
+                    {
+                        loader: "less-loader"
+                    }
+                ]
             },
             {
                 test: /\.(jpeg|jpg|png|gif)/,
