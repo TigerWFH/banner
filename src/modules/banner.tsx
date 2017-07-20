@@ -116,4 +116,4 @@ class Banner extends React.Component<IProps, IState> {
     }
 }
 
-export default Banner;
+export { Banner };
