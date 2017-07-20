@@ -10,7 +10,7 @@ module.exports = {
         path: buildPath,
         filename: 'index.js',
         library: "banner",
-        libraryTarget: "amd"
+        libraryTarget: "commonjs"
     },
     module: {
         rules: [
