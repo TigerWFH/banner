@@ -10,7 +10,7 @@ module.exports = {
         path: buildPath,
         filename: 'index.js',
         library: "banner",
-        libraryTarget: "commonjs"
+        libraryTarget: "umd"
     },
     module: {
         rules: [
@@ -48,9 +48,9 @@ module.exports = {
                 ]
             }
         ]
+    },
+    externals: {
+        "react": "React",
+        "react-dom": "ReactDOM"
     }
-    // externals: {
-    //     "react": "React",
-    //     "react-dom": "ReactDOM"
-    // }
 };
