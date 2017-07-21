@@ -1,8 +1,9 @@
 {
     "compilerOptions": {
         "jsx": "react",
-        "outDir": "./dist",
+        "outDir": "./lib",
         "target": "es5",
+        "module": "commonjs",
         "sourceMap": true,
         "allowJs": true,
         "lib": [
