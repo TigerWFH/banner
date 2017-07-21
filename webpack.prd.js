@@ -9,7 +9,6 @@ module.exports = {
     output: {
         path: buildPath,
         filename: 'index.js',
-        library: "banner",
         libraryTarget: "commonjs"
     },
     module: {
@@ -50,7 +49,7 @@ module.exports = {
         ]
     },
     externals: {
-        "react": "React",
-        "react-dom": "ReactDOM"
+        "react": "react",
+        "react-dom": "react-dom"
     }
 };

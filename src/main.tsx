@@ -5,7 +5,7 @@ import * as ReactDOM from 'react-dom';
 import './main.less';
 
 // components
-import Banner from './modules/banner';
+import { Banner } from './modules/banner';
 
 interface IProps {
 }
