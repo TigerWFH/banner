@@ -10,7 +10,7 @@ module.exports = {
     entry: path.join(sourcePath, 'banner.tsx'),
     output: {
         path: buildPath,
-        filename: 'index.js',
+        filename: '[name].js',
         libraryTarget: 'commonjs'
     },
     externals: {
@@ -61,6 +61,6 @@ module.exports = {
     },
     target: "web",
     devServer: {
-        
+
     }
 }

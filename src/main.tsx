@@ -2,10 +2,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 // css
-import './main.less';
+// import './main.less';
 
 // components
-import { Banner } from './modules/banner';
+import { Banner } from './banner';
 
 interface IProps {
 }
