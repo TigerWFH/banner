@@ -4,17 +4,17 @@ const path = require('path');
 let sourcePath = path.join(__dirname, 'src');
 let buildPath = path.join(__dirname, 'lib');
 
+let env = process.env.NODE_ENV === "development" ? "development" : "production";
 
 module.exports = {
     entry: path.join(sourcePath, 'banner.tsx'),
     output: {
         path: buildPath,
         filename: 'index.js',
-        library: 'banner',
         libraryTarget: 'commonjs'
     },
     externals: {
-        react: "React"
+        react: "react"
     },
     module: {
         rules: [
@@ -28,13 +28,39 @@ module.exports = {
                 include: [sourcePath],
                 use: [
                     {
+                        loader: 'style-loader'    
+                    },
+                    {
                         loader: 'css-loader'
                     },
                     {
                         loader: 'less-loader'
                     }
                 ]
+            },
+            {
+                test: /\.(jpeg|jpg|png|gif)$/,
+                include: [sourcePath],
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8192
+                        }  
+                    }
+                ]
             }
         ]
+    },
+    resolve: {
+        modules: [
+            "node_modules",
+            sourcePath
+        ],
+        extensions: [".tsx", ".ts", ".jsx", ".js", ".json",".less",".css"]
+    },
+    target: "web",
+    devServer: {
+        
     }
 }

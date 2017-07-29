@@ -9,12 +9,8 @@ module.exports = {
     output: {
         path: buildPath,
         filename: 'index.js',
-<<<<<<< HEAD:webpack.prd.js
         libraryTarget: "commonjs"
-=======
-        library: "banner",
-        libraryTarget: "umd"
->>>>>>> 4f229dae45157df2d6e538500ad9c83f8980ecf5:abanden/webpack.prd.js
+
     },
     module: {
         rules: [
