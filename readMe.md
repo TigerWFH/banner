@@ -3,6 +3,17 @@
 ## 引入
 import Banner from 'dist/banner.js'
 
+## npm 命令
+* npm run build-dev
+
+    构建开发包
+* npm run server
+
+    启动Server，查看module显示效果!
+* npm run buid-prd
+
+    构建导出包
+
 ## 识别库的类型
 * 全局库（jQuery）
 
