@@ -90,7 +90,13 @@ describe("Banner Test", function () {
     });
 
     it("simulates click events", () => {
-        const divClick = sinon.spy();
+        // const divClick = sinon.spy();
+        const mWrapper = mount(<Banner />);
+        const originRunningOrder = mWrapper.state("runningOrder");
+        console.log("origin--->", originRunningOrder);
+        mWrapper.find('.sx-dot').simulate("click");
+        console.log("new--->", mWrapper.state("runningOrder"));
+        expect(mWrapper.state("runningOrder")).not.toEqual(originRunningOrder);
     });
     it("should render to static HTML", () => {
         expect(render(<Banner />).text()).toBe('');
