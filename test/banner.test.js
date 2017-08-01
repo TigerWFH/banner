@@ -52,19 +52,47 @@
 
 import React from 'react';
 import { Banner } from '../lib/banner';
+import sinon from 'sinon';
 import { shallow, mount, render } from 'enzyme';
 
 describe("Banner Test", function () {
-    it("should render with throwing an error", function () {
-        expect(shallow(<Banner />).contains(<div className="sx-banner-wrapper"></div>)).not.toBe(true);
+    let defautTotalImgOrDot = 4;
+    let wrapper = shallow(<Banner />);
+    // 测试渲染结果是否符合预期
+    it("should render img.sx-image-img", () => {
+        console.log("total: ", wrapper.find('.sx-image-img').length);
+        expect(wrapper.find('.sx-image-img').length).toBe(defautTotalImgOrDot);
     });
+
+    it("should render span.sx-dot-span", () => {
+        console.log("total: ", wrapper.find('.sx-dot.span').length);
+        expect(wrapper.find('.sx-image-img').length).toBe(defautTotalImgOrDot);
+    });
+
     it("should be selectable by class 'sx-banner-wrapper' ", function () {
-        expect(shallow(<Banner />).is('.sx-banner-wrapper')).toBe(true);
+        expect(wrapper.is('.sx-banner-wrapper')).toBe(true);
     });
-    it("should mount in a fill dom", () => {
-        expect(mount(<Banner />).find('.sx-banner-wrapper').length).toBe(1);
+    // 测试周期函数是否调用
+    it("calls componentDidMount", () => {
+        sinon.spy(Banner.prototype, 'componentDidMount');
+        const mWrapper = mount(<Banner />);//渲染到DOM
+        expect(Banner.prototype.componentDidMount.calledOnce).toEqual(true);
+    });
+
+    it("allowing us to set props", () => {
+        const mWrapper = mount(<Banner imgSourceList={["123", "123"]} />);
+        expect(mWrapper.props().imgSourceList).toEqual(["123", "123"]);
+        mWrapper.setProps({
+            imgSourceList: ["111", "222"]
+        });
+        expect(mWrapper.props().imgSourceList).toEqual(["111", "222"]);
+
+    });
+
+    it("simulates click events", () => {
+        const divClick = sinon.spy();
     });
     it("should render to static HTML", () => {
         expect(render(<Banner />).text()).toBe('');
-    })
+    });
 });
