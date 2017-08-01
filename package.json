@@ -4,7 +4,7 @@
   "description": "基于typescript的轮播组件",
   "main": "lib/banner.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build-dev": "export NODE_ENV=development && webpack",
     "build-prd": "export NODE_ENV=production && webpack",
     "server": "export NODE_ENV=development && webpack-dev-server --progress --open"
@@ -44,6 +44,7 @@
     "jest": "^20.0.4",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
+    "react-test-renderer": "^15.6.1",
     "style-loader": "^0.18.2",
     "typescript": "^2.4.1",
     "url-loader": "^0.5.9",
