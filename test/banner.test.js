@@ -55,37 +55,6 @@ import { Banner } from '../lib/banner';
 import sinon from 'sinon';
 import { shallow, mount, render } from 'enzyme';
 
-class Foo extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { count: 0 };
-    }
-    render() {
-        const { count } = this.state;
-        return (
-            <div>
-                <div className={`clicks-${count}`}>
-                    {count} clicks
-                </div>
-                <a href="url" onClick={(event) => { this.setState({ count: count + 1 }); console.log("--->", event.target); }}>
-                    Increment
-                </a>
-            </div>
-        );
-    }
-}
-
-describe("Test", () => {
-    it('1', () => {
-        const wrapper = mount(<Foo />);
-        expect(wrapper.state("count")).toEqual(0);
-        wrapper.find('a').simulate('click', {
-            target: "simulate"
-        });
-        expect(wrapper.state("count")).toEqual(1);
-    });
-})
-
 describe("Banner Test", function () {
     let defautTotalImgOrDot = 4;
     let wrapper = shallow(<Banner />);
