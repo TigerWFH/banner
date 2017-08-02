@@ -1,7 +1,7 @@
 # banner使用方法
 
 ## 引入
-import Banner from 'dist/banner.js'
+import Banner from 'banner.js'
 
 ## npm 命令
 * npm run build-dev
@@ -13,7 +13,22 @@ import Banner from 'dist/banner.js'
 * npm run buid-prd
 
     构建导出包
+## React单元测试
+* 安装测试依赖包
 
+    npm install --save-dev jest enzyme sinon react-test-renderer
+* 碰到的问题
+
+    [问题以及解决方案](https://github.com/facebookincubator/create-react-app/issues/1981)
+ * reference: 
+
+    [react-test](https://facebook.github.io/react/docs/test-utils.html#simulate)
+
+    [jest](https://facebook.github.io/jest/)
+
+    [enzyme](http://airbnb.io/enzyme/index.html) 
+
+   
 ## 识别库的类型
 * 全局库（jQuery）
 
