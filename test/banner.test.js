@@ -60,12 +60,10 @@ describe("Banner Test", function () {
     let wrapper = shallow(<Banner />);
     // 测试渲染结果是否符合预期
     it("should render img.sx-image-img", () => {
-        console.log("total: ", wrapper.find('.sx-image-img').length);
         expect(wrapper.find('.sx-image-img').length).toBe(defautTotalImgOrDot);
     });
 
     it("should render span.sx-dot-span", () => {
-        console.log("total: ", wrapper.find('.sx-dot.span').length);
         expect(wrapper.find('.sx-image-img').length).toBe(defautTotalImgOrDot);
     });
 

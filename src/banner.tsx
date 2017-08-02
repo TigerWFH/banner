@@ -95,6 +95,7 @@ class Banner extends React.Component<IProps, IState> {
                 this.setState({
                     runningOrder: i
                 });
+                break;
             }
         }
         this.timer = this._setTimer();
